@@ -1,10 +1,8 @@
 import {
   AlertDialog,
-  AlertDialogAction,
   AlertDialogCancel,
   AlertDialogContent,
   AlertDialogDescription,
-  AlertDialogFooter,
   AlertDialogHeader,
   AlertDialogTitle,
   AlertDialogTrigger,
@@ -12,98 +10,134 @@ import {
 import { Switch } from "@/components/ui/switch";
 import { CiSettings } from "react-icons/ci";
 import { FaTimes } from "react-icons/fa";
+import { HiOutlineDevicePhoneMobile } from "react-icons/hi2";
+import { MdLaptopMac } from "react-icons/md";
+
 
 const DeskSetting = () => {
-    return ( 
-    <AlertDialog >
-  <AlertDialogTrigger className="text-center rounded-full bg-[#5849EF] p-3">
-    <CiSettings className="text-white text-xl" /> 
-  </AlertDialogTrigger>
-  <AlertDialogContent className="rounded-3xl">
-    <AlertDialogHeader>
-        <div className="flex justify-center items-center">
+  return (
+    <AlertDialog>
+      <AlertDialogTrigger className="text-center rounded-full bg-[#5849EF] p-3">
+        <CiSettings className="text-white text-xl" />
+      </AlertDialogTrigger>
+
+      <AlertDialogContent className="rounded-3xl">
+        {/* Header should only contain title + description */}
+        <AlertDialogHeader>
+          <div className="flex items-start justify-between gap-2">
             <div className="w-full">
-                <AlertDialogTitle className="font-Ruska font-bold text-xl mb-1.5">Setting</AlertDialogTitle>
-      <p className="text-xs text-[#00000066] border-b-3 pb-3">A short description here</p>
+              <AlertDialogTitle className="font-Ruska font-bold text-xl">
+                Setting
+              </AlertDialogTitle>
+              <AlertDialogDescription className="text-xs text-[#00000066]">
+                A short description here
+              </AlertDialogDescription>
             </div>
-            <AlertDialogCancel className="border-none outline-none"><FaTimes/></AlertDialogCancel>
-        </div>
-      
-      <AlertDialogDescription>
-       <ul className="text-black">
-        <li className="flex justify-between items-center py-3 border-b-3">
+
+            {/* Optional close icon */}
+            <AlertDialogCancel className="border-none outline-none p-2 rounded-full hover:bg-black/5">
+              <FaTimes />
+            </AlertDialogCancel>
+          </div>
+        </AlertDialogHeader>
+
+        {/* Put the list OUTSIDE the Description to avoid <p><ul> */}
+        <ul className="text-black mt-2">
+          <li className="flex justify-between items-center py-3 border-b border-black/10">
             <div>
-                <p className="font-Ruska text-[13px] mb-5 font-bold text-[#000000A6]">
-                    Notification
-                </p>
-                <p>Enable email notification</p>
+              <p className="font-Ruska text-[13px] mb-1.5 font-bold text-[#000000A6]">Notification</p>
+              <p className="text-sm">Enable email notification</p>
             </div>
-            <Switch checked className="opacity-25"/>
-        </li>
-        <li className="flex justify-between items-center py-3 border-b-3">
+            <Switch
+              defaultChecked
+              className="data-[state=checked]:bg-[#5849EF]/50 opacity-80"
+            />
+          </li>
+
+          <li className="flex justify-between items-center py-3 border-b border-black/10">
+            <p className="text-[13px] mb-0.5">Get SMS for referrals</p>
+            <Switch className="data-[state=checked]:bg-[#5849EF]" />
+          </li>
+
+          <li className="flex justify-between items-center py-3 border-b border-black/10">
+            <p className="text-[13px] mb-0.5">Get notifications from bookings</p>
+            <Switch className="data-[state=checked]:bg-[#5849EF]" />
+          </li>
+
+          <li className="flex justify-between items-center py-3 border-b border-black/10">
+            <p className="text-[13px] mb-0.5">Get notification when there is a redemption</p>
+            <Switch className="data-[state=checked]:bg-[#5849EF]" />
+          </li>
+
+          <li className="flex justify-between items-center py-3 border-b border-black/10">
             <div>
-                <p className="text-[13px] mb-2">
-                    Get Sms for referrals
-                </p>
-                {/* <p>Enable email notification</p> */}
+              <p className="font-Ruska text-[13px] mb-1.5 font-bold text-[#000000A6]">Security</p>
+              <p className="text-sm">Enable 2FA</p>
             </div>
-            <Switch />
-        </li>
-        <li className="flex justify-between items-center py-3 border-b-3">
+            <Switch className="data-[state=checked]:bg-[#5849EF]" />
+          </li>
+
+          {/* dedupe repeated sections or keep if intentional */}
+          <li className="flex justify-between items-center py-3 border-b border-black/10">
             <div>
-                <p className="text-[13px] mb-2">
-                    Get notifications from bookings
-                </p>
-                {/* <p>Enable email notification</p> */}
+              <p className="font-Ruska text-[13px] mb-1.5 font-bold text-[#000000A6]">Notification</p>
+              <p className="text-sm">Enable email notification</p>
             </div>
-            <Switch />
-        </li>
-        <li className="flex justify-between items-center py-3 border-b-3">
+            <Switch defaultChecked className="data-[state=checked]:bg-[#5849EF]" />
+          </li>
+
+          <li className="flex justify-between items-center py-3 border-b border-black/10">
             <div>
-                <p className="text-[13px] mb-2">
-                    Get notification when there is an redemption
-                </p>
-                {/* <p>Enable email notification</p> */}
+              <p className="font-Ruska text-[13px] mb-1.5 font-bold text-[#000000A6]">Active sessions</p>
+              <div className="text-sm flex items-center gap-3">
+                <HiOutlineDevicePhoneMobile className="text-2xl" />
+
+                <div>
+                    <p className="text-[13px]">Iphone 13 pro</p>
+                    <p className="text-[11px] text-[#5849EF]">Current Session</p>
+                </div>
+              </div>
             </div>
-            <Switch  />
-        </li>
-        <li className="flex justify-between items-center py-3 border-b-3">
+            <p className="text-[#5849EF] text-xs">Log out</p>
+          </li>
+           <li className="flex justify-between  py-3 border-b border-black/10">
             <div>
-                <p className="font-Ruska text-[13px] mb-3 font-bold text-[#000000A6]">
-                    Security
-                </p>
-                <p>Enable 2FA</p>
+              {/* <p className="font-Ruska text-[13px] mb-1.5 font-bold text-[#000000A6]">Active sessions</p> */}
+              <div className="text-sm flex  gap-3">
+                <MdLaptopMac className="text-2xl" />
+
+                <div>
+                    <p className="text-[13px]">Macbook pro</p>
+                    {/* <p className="text-[11px] text-[#5849EF]">Current Session</p> */}
+                </div>
+              </div>
             </div>
-            <Switch/>
-        </li>
-         <li className="flex justify-between items-center py-3 border-b-3">
+            {/* <p className="text-[#5849EF] text-xs">Log out</p> */}
+          </li>
+           <li className="flex justify-between  py-3 border-b border-black/10">
             <div>
-                <p className="font-Ruska text-[13px] mb-3 font-bold text-[#000000A6]">
-                    Notification
-                </p>
-                <p>Enable email notification</p>
+              {/* <p className="font-Ruska text-[13px] mb-1.5 font-bold text-[#000000A6]">Active sessions</p> */}
+              <div className="text-sm flex  gap-3">
+                <HiOutlineDevicePhoneMobile className="text-2xl" />
+
+                <div>
+                    <p className="text-[13px]">Iphone 13 pro</p>
+                    {/* <p className="text-[11px] text-[#5849EF]">Current Session</p> */}
+                </div>
+              </div>
             </div>
-            <Switch checked className="opacity-25"/>
-        </li>
-         <li className="flex justify-between items-center py-3 border-b-3">
-            <div>
-                <p className="font-Ruska text-[13px] mb-3 font-bold text-[#000000A6]">
-                    Notification
-                </p>
-                <p>Enable email notification</p>
-            </div>
-            <Switch checked className="opacity-25"/>
-        </li>
-       </ul>
-      </AlertDialogDescription>
-    </AlertDialogHeader>
-    {/* <AlertDialogFooter>
-      
-      <AlertDialogAction></AlertDialogAction>
-    </AlertDialogFooter> */}
-  </AlertDialogContent>
-</AlertDialog>
-    );
-}
- 
+            {/* <p className="text-[#5849EF] text-xs">Log out</p> */}
+          </li>
+         
+        </ul>
+
+        {/* Optional footer buttons */}
+        {/* <AlertDialogFooter>
+          <AlertDialogAction>Save</AlertDialogAction>
+        </AlertDialogFooter> */}
+      </AlertDialogContent>
+    </AlertDialog>
+  );
+};
+
 export default DeskSetting;

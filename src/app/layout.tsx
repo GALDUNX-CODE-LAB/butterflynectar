@@ -41,7 +41,7 @@ export default function RootLayout({
           <div className="hidden lg:block h-[100vh] w-[15%] transition-all duration-200">
             <Sidebar/>
           </div>
-          <div className="h-auto scrollbar-none md:h-[100vh] overflow-y-auto p-5 md:p-8 lg:p-10 w-full md:w-full lg:max-w-[80%] transition-all transform ease-in-out duration-1000 delay-1200">
+          <div className="scrollbar-none lg:h-[100vh] lg:overflow-y-auto px-5 py-3 md:p-8 lg:p-10 w-full md:w-full lg:max-w-[80%] transition-all transform ease-in-out duration-1000 delay-1200">
             {children}
           </div>
         </div>

@@ -54,7 +54,7 @@ const Secondprofile = () => {
         </div>
         {/* secondviv */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-            <Tilt scale={1.1} transitionSpeed={700}   className="p-5 rounded-3xl bg-white">
+            <Tilt  className="p-5 rounded-3xl bg-white">
                  <h1 className="text-lg font-Ruska font-bold mb-1">Rank Tracker</h1>
                  <p className="text-sm text-black opacity-40 mb-5">
                     A short description here
@@ -65,7 +65,7 @@ const Secondprofile = () => {
                  </div>
                 
             </Tilt>
-              <Tilt scale={1.1} transitionSpeed={700}  className="p-5 rounded-3xl bg-white">
+              <Tilt  className="p-5 rounded-3xl bg-white">
                  <h1 className="text-lg font-Ruska font-bold mb-1">Upline Info</h1>
                  <p className="text-sm text-black opacity-40 mb-5">
                     A short description here
