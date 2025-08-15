@@ -4,7 +4,7 @@ import React, { useEffect, useState, useCallback } from "react";
 import { FaTimes } from "react-icons/fa";
 import { TbMenu3 } from "react-icons/tb";
 import { MdOutlineEventAvailable } from "react-icons/md";
-import { LayoutDashboardIcon, MedalIcon, UserRoundPlus, Wallet2Icon } from "lucide-react";
+import { LayoutDashboardIcon, MedalIcon, Settings, UserRoundPlus, Wallet2Icon } from "lucide-react";
 
 const Hamburgernav = () => {
   const mapLinks = [
@@ -14,6 +14,7 @@ const Hamburgernav = () => {
     { id: 4, name: "Ranks & Perks", link: "/ranksperks", icon: MedalIcon},
     { id: 5, name: "Earning", link: "/earning", icon: Wallet2Icon },
     { id: 6, name: "Profile", link: "/profile", icon: UserRoundPlus },
+     { id: 7, name: "Setting", link: "/mobilesetting", icon: Settings },
   ];
 
   const [open, setOpen] = useState(false);
@@ -51,6 +52,7 @@ const Hamburgernav = () => {
   return (
     <div className="sticky top-0 z-40 font-Ruska">
       {/* Trigger */}
+      
       <button
         aria-controls="mobile-sidenav"
         aria-expanded={open}

@@ -21,7 +21,7 @@ const DeskSetting = () => {
         <CiSettings className="text-white text-xl" />
       </AlertDialogTrigger>
 
-      <AlertDialogContent className="rounded-3xl">
+      <AlertDialogContent className="rounded-3xl pb-10">
         {/* Header should only contain title + description */}
         <AlertDialogHeader>
           <div className="flex items-start justify-between gap-2">
@@ -41,7 +41,7 @@ const DeskSetting = () => {
           </div>
         </AlertDialogHeader>
 
-        {/* Put the list OUTSIDE the Description to avoid <p><ul> */}
+     
         <ul className="text-black mt-2">
           <li className="flex justify-between items-center py-3 border-b border-black/10">
             <div>
@@ -77,7 +77,7 @@ const DeskSetting = () => {
             <Switch className="data-[state=checked]:bg-[#5849EF]" />
           </li>
 
-          {/* dedupe repeated sections or keep if intentional */}
+  
           <li className="flex justify-between items-center py-3 border-b border-black/10">
             <div>
               <p className="font-Ruska text-[13px] mb-1.5 font-bold text-[#000000A6]">Notification</p>
@@ -131,10 +131,7 @@ const DeskSetting = () => {
          
         </ul>
 
-        {/* Optional footer buttons */}
-        {/* <AlertDialogFooter>
-          <AlertDialogAction>Save</AlertDialogAction>
-        </AlertDialogFooter> */}
+       
       </AlertDialogContent>
     </AlertDialog>
   );
