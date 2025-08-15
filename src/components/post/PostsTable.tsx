@@ -7,7 +7,7 @@ import {
   TableRow,
   TableCaption,
 } from '@/components/ui/table';
-// import Link from 'next/link';
+
 import posts from '../../../data/post';
 import { Post } from '../../../types/post';
 

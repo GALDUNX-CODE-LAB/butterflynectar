@@ -1,9 +1,9 @@
-// import { QrCode } from "lucide-react";
+
 
 import { ImQrcode } from "react-icons/im";
 import { MdContentCopy } from "react-icons/md";
 import { ChartPieDonutText } from "../Piechart";
-// import { ChartPieDonut } from "./piechart";
+
 const heading = [
     {
         id:1,

@@ -1,7 +1,7 @@
 import DashboardCard from "@/components/dashboard/DashboardCard";
 import DashboardCard2 from "@/components/dashboard/dashboardCard2";
 import PostsTable from "@/components/post/PostsTable";
-// import Posttable from "@/components/post/PostsTable";
+
 
 
 export default function Home() {

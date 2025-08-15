@@ -4,9 +4,7 @@ import "./globals.css";
 import Navbar from "@/components/Navbar";
 import Sidebar from "@/components/Sidebar";
 import Hamburgernav from "@/components/HamburgerNav";
-// import { SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar"
-// import { Sidebar } from "@/components/Sidebar";
-// import { AppSidebar } from "@/components/app-sidebar"
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,7 +32,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Navbar/>
-        <div className=" block lg:hidden my-3 w-full p-5 md:p-8">
+        <div className=" block lg:hidden my-3 w-full py-2.5 px-5 md:p-8 shadow-xl">
             <Hamburgernav/>
         </div>
         <div className="flex">
