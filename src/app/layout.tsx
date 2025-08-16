@@ -16,8 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Flight_proj",
-  description: "Creating a flight stuff",
+  title: "Butterfly Nectar",
+  description: "Official Affiliate Program for Butterfly .Inc",
 };
 
 export default function RootLayout({
