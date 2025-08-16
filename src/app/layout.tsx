@@ -5,7 +5,6 @@ import Navbar from "@/components/Navbar";
 import Sidebar from "@/components/Sidebar";
 import Hamburgernav from "@/components/HamburgerNav";
 
-
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -28,22 +27,19 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <Navbar/>
-        <div className=" block lg:hidden my-3 w-full py-1.5 px-5 md:py-5 md: shadow-xl">
-            <Hamburgernav/>
+      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
+        <Navbar />
+        <div className="block lg:hidden">
+          <Hamburgernav />
         </div>
         <div className="flex">
-          <div className="hidden lg:block h-[100vh] w-[15%] transition-all duration-200">
-            <Sidebar/>
+          <div className="hidden lg:block h-[100vh] min-w-[206px] transition-all duration-200">
+            <Sidebar />
           </div>
-          <div className="scrollbar-none lg:h-[100vh] lg:overflow-y-auto px-5 py-3 md:p-8 lg:p-10 w-full md:w-full lg:max-w-[80%] transition-all transform ease-in-out duration-1000 delay-1200">
+          <div className="scrollbar-none lg:h-[100vh] lg:overflow-y-auto px-5 py-3 md:p-8 lg:p-10 w-full md:w-full lg:max-w-full transition-all transform ease-in-out duration-1000 delay-1200">
             {children}
           </div>
         </div>
-        
       </body>
     </html>
   );

@@ -5,16 +5,17 @@ import { FaTimes } from "react-icons/fa";
 import { TbMenu3 } from "react-icons/tb";
 import { MdOutlineEventAvailable } from "react-icons/md";
 import { LayoutDashboardIcon, MedalIcon, Settings, UserRoundPlus, Wallet2Icon } from "lucide-react";
+import Image from "next/image";
 
 const Hamburgernav = () => {
   const mapLinks = [
     { id: 1, name: "Dashboard", link: "/", icon: LayoutDashboardIcon },
-    { id: 2, name: "Referrals", link: "/referrals", icon: UserRoundPlus},
-    { id: 3, name: "MyBooking", link: "/booking", icon: MdOutlineEventAvailable},
-    { id: 4, name: "Ranks & Perks", link: "/ranksperks", icon: MedalIcon},
+    { id: 2, name: "Referrals", link: "/referrals", icon: UserRoundPlus },
+    { id: 3, name: "MyBooking", link: "/booking", icon: MdOutlineEventAvailable },
+    { id: 4, name: "Ranks & Perks", link: "/ranksperks", icon: MedalIcon },
     { id: 5, name: "Earning", link: "/earning", icon: Wallet2Icon },
     { id: 6, name: "Profile", link: "/profile", icon: UserRoundPlus },
-     { id: 7, name: "Setting", link: "/mobilesetting", icon: Settings },
+    { id: 7, name: "Setting", link: "/mobilesetting", icon: Settings },
   ];
 
   const [open, setOpen] = useState(false);
@@ -50,68 +51,76 @@ const Hamburgernav = () => {
   }, [open, onKeyDown]);
 
   return (
-    <div className="sticky top-0 z-40 font-Ruska">
-      {/* Trigger */}
-      
-      <button
-        aria-controls="mobile-sidenav"
-        aria-expanded={open}
-        aria-label="Open menu"
-        onClick={() => setOpen(true)}
-        className="p-2 rounded-lg hover:bg-black/5 transition"
-      >
-        <TbMenu3 className="text-4xl" />
-      </button>
-
-      {/* Backdrop */}
-      <div
-        onClick={() => setOpen(false)}
-        className={`fixed inset-0 z-50 bg-black/40 backdrop-blur-sm transition-opacity duration-300
+    <>
+      <div className="wrap relative h-[60px]"></div>
+      <div className="top-0 right-0 left-0 z-40 font-Ruska border-b py-2 bg-black/10 fixed border-b-black backdrop-blur-lg px-3">
+        {/* Trigger */}
+        <div className="flex justify-between items-center">
+          <div className="flex items-center">
+            <Image src={"/butterfly.png"} width={40} height={40} alt="Butterfly" />{" "}
+            <span className="font-Ruska font-bold -ml-3">utterfly</span>
+            <span className="font-Ruska font-bold ml-2">Nectar</span>
+          </div>
+          <button
+            aria-controls="mobile-sidenav"
+            aria-expanded={open}
+            aria-label="Open menu"
+            onClick={() => setOpen(true)}
+            className="p-2 rounded-lg hover:bg-black/5 transition"
+          >
+            <TbMenu3 className="text-xl" />
+          </button>
+        </div>
+        {/* Backdrop */}
+        <div
+          onClick={() => setOpen(false)}
+          className={`fixed inset-0 z-50 bg-black/40 backdrop-blur-sm transition-opacity duration-300
         ${open ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}
-        aria-hidden={!open}
-      />
+          aria-hidden={!open}
+        />
 
-      {/* Side Nav Panel */}
-      <nav
-        id="mobile-sidenav"
-        role="dialog"
-        aria-modal="true"
-        aria-hidden={!open}
-        className={`fixed left-0 top-0 z-[60] h-dvh w-72 max-w-[85vw] bg-white shadow-2xl
+        {/* Side Nav Panel */}
+        <nav
+          id="mobile-sidenav"
+          role="dialog"
+          aria-modal="true"
+          aria-hidden={!open}
+          className={`fixed left-0 top-0 z-[60] h-dvh w-72 max-w-[85vw] bg-white shadow-2xl
         p-6 flex flex-col gap-4 transition-transform duration-300 ease-out will-change-transform
         ${open ? "translate-x-0" : "-translate-x-full"}`}
-      >
-        {/* Close button only */}
-        <button
-          onClick={() => setOpen(false)}
-          aria-label="Close menu"
-          className="ml-auto p-2 rounded-full hover:bg-black/5 transition"
         >
-          <FaTimes className="text-2xl text-red-600" />
-        </button>
+          {/* Close button only */}
+          <button
+            onClick={() => setOpen(false)}
+            aria-label="Close menu"
+            className="ml-auto p-2 rounded-full hover:bg-black/5 transition"
+          >
+            <FaTimes className="text-2xl text-red-600" />
+          </button>
 
-        <div className="h-px bg-black/10" />
+          <div className="h-px bg-black/10" />
 
-        {/* Links with icons */}
-        <ul className="flex flex-col gap-2">
-          {mapLinks.map((x) => {
-            const Icon = x.icon;
-            return (
-              <li key={x.id}>
-                <Link
-                  href={x.link}
-                  onClick={() => setOpen(false)}
-                  className="flex items-center capitalize text-lg py-2 px-2 rounded-xl hover:bg-black/5 transition"
-                >
-                  <Icon className="w-5 h-5 mr-3" aria-hidden="true" />
-                  <span>{x.name}</span>
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
-      </nav>
-    </div>
+          {/* Links with icons */}
+          <ul className="flex flex-col gap-2">
+            {mapLinks.map((x) => {
+              const Icon = x.icon;
+              return (
+                <li key={x.id}>
+                  <Link
+                    href={x.link}
+                    onClick={() => setOpen(false)}
+                    className="flex items-center capitalize text-lg py-2 px-2 rounded-xl hover:bg-black/5 transition"
+                  >
+                    <Icon className="w-5 h-5 mr-3" aria-hidden="true" />
+                    <span>{x.name}</span>
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+        </nav>
+      </div>
+    </>
   );
 };
 

@@ -1,22 +1,9 @@
 "use client";
 
-import { TrendingUp } from "lucide-react";
 import { CartesianGrid, Line, LineChart, XAxis } from "recharts";
 
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardFooter,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
-import {
-  ChartConfig,
-  ChartContainer,
-  ChartTooltip,
-  ChartTooltipContent,
-} from "@/components/ui/chart";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { ChartConfig, ChartContainer, ChartTooltip, ChartTooltipContent } from "@/components/ui/chart";
 
 export const description = "A multiple line chart";
 
@@ -44,7 +31,7 @@ export function EarnSecond() {
   return (
     <Card>
       <CardHeader>
-        <CardTitle>Points  Breakdown</CardTitle>
+        <CardTitle>Points Breakdown</CardTitle>
       </CardHeader>
       <CardContent>
         <ChartContainer config={chartConfig}>
@@ -65,24 +52,11 @@ export function EarnSecond() {
               tickFormatter={(value) => value.slice(0, 3)}
             />
             <ChartTooltip cursor={false} content={<ChartTooltipContent />} />
-            <Line
-              dataKey="desktop"
-              type="monotone"
-              stroke="#5849EF"
-              strokeWidth={2}
-              dot={false}
-            />
-            <Line
-              dataKey="mobile"
-              type="monotone"
-              stroke="#CFEE49"
-              strokeWidth={2}
-              dot={false}
-            />
+            <Line dataKey="desktop" type="monotone" stroke="#5849EF" strokeWidth={2} dot={false} />
+            <Line dataKey="mobile" type="monotone" stroke="#CFEE49" strokeWidth={2} dot={false} />
           </LineChart>
         </ChartContainer>
       </CardContent>
-   
     </Card>
   );
 }
