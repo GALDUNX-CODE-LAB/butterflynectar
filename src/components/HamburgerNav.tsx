@@ -53,7 +53,7 @@ const Hamburgernav = () => {
   return (
     <>
       <div className="wrap relative h-[60px]"></div>
-      <div className="top-0 right-0 left-0 z-40 font-Ruska border-b py-2 bg-black/10 fixed border-b-black backdrop-blur-lg px-3">
+      <div className="top-0 right-0 left-0 z-40 font-Ruska border-b py-2 bg-white/10 fixed border-b-black backdrop-blur-lg px-3">
         {/* Trigger */}
         <div className="flex justify-between items-center">
           <div className="flex items-center">
@@ -86,14 +86,14 @@ const Hamburgernav = () => {
           aria-modal="true"
           aria-hidden={!open}
           className={`fixed left-0 top-0 z-[60] h-dvh w-72 max-w-[85vw] bg-white shadow-2xl
-        p-6 flex flex-col gap-4 transition-transform duration-300 ease-out will-change-transform
+        px-6 flex flex-col gap-4 transition-transform duration-300 ease-out will-change-transform
         ${open ? "translate-x-0" : "-translate-x-full"}`}
         >
           {/* Close button only */}
           <button
             onClick={() => setOpen(false)}
             aria-label="Close menu"
-            className="ml-auto p-2 rounded-full hover:bg-black/5 transition"
+            className="ml-auto  rounded-full hover:bg-black/5 mt-3 transition"
           >
             <FaTimes className="text-2xl text-red-600" />
           </button>
