@@ -51,7 +51,7 @@ const DashboardCard2 = () => {
   const [referTab2, setReferTab2] = useState(true);
   return (
     <div className="grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3">
-      <div className="order-3 lg:order-1 contained w-full overflow-hidden">
+      <div className="order-3 lg:order-1 contained max-h-[362px] w-full overflow-hidden">
         <h3 className="w-full text-left font-bold font-Ruska text-[16px]">QUICK ACTION</h3>
         <ImQrcode className="w-[260px] h-[158px]" />
         <div className="flex items-center justify-between w-full text-[13px]">
@@ -81,7 +81,7 @@ const DashboardCard2 = () => {
       </div>
 
       {/* this is the second card  */}
-      <div className="order-2 lg:order-2  contained">
+      <div className="order-2 lg:order-2  contained max-h-[362px]">
         <div className="flex items-center justify-between w w-full">
           <h3 className="w-[30%] text-shared">Activities</h3>
           <div className="rounded-3xl flex items-center bg-background w-[50%] text-[13px]">
@@ -123,7 +123,7 @@ const DashboardCard2 = () => {
       </div>
 
       {/* this is the piechart card   */}
-      <div className="order-1 lg:order-3 bg-white pt-4 px-4 rounded-2xl w-full">
+      <div className="order-1 lg:order-3 bg-white pt-4 px-4 rounded-2xl h-[362px] max-h-[362px] w-full">
         <h3 className="w-full text-left font-bold">QUICK STATS</h3>
         <div className="w-full grid grid-cols-3 gap-x-2 text-[13px] pt-3 capitalize">
           <div className="flex items-center gap-1 ">
