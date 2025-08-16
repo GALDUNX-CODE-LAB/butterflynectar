@@ -14,7 +14,7 @@ const Referralpage = () => {
     <div className="flex flex-col gap-5 transition-all transform ease-in-out duration-1200 delay-1100">
       <DashboardCard/>
       <Rankboard/>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full border-2">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 w-full">
         <PerckCheck/>
         <PerckCheck/>
       </div>
