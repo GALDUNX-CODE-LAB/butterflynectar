@@ -9,10 +9,10 @@ const CaroselPage = () => {
         <div className="w-full">
             <Carousel  plugins={[
         Autoplay({
-          delay: 2000,
+          delay: 2500,
         }),
       ]}>
- <CarouselContent className="ml-0 md:-ml-4 md:gap-4 ">
+ <CarouselContent className="ml-0 gap-2 md:-ml-4 md:gap-4 ">
   <CarouselItem className=" basis-full md:basis-1/2 lg:basis-1/4 p-4 add-contained">
       <h3 className="w-full text-left font-bold font-Ruska text-[16px]">
           Connector PRO

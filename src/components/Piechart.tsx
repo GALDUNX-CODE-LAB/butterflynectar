@@ -64,7 +64,7 @@ export function ChartPieDonutText() {
       <CardContent className="flex-1 pb-0">
         <ChartContainer
           config={chartConfig}
-          className="mx-auto aspect-square max-h-[250px]"
+          className="mx-auto aspect-square"
         >
           <PieChart>
             <ChartTooltip
@@ -80,14 +80,7 @@ export function ChartPieDonutText() {
           </PieChart>
         </ChartContainer>
       </CardContent>
-      {/* <CardFooter className="flex-col gap-2 text-sm">
-        <div className="flex items-center gap-2 leading-none font-medium">
-          Hey bro <TrendingUp className="h-4 w-4" />
-        </div>
-        <div className="text-muted-foreground leading-none">
-          
-        </div>
-      </CardFooter> */}
+      
     </Card>
   )
 }

@@ -32,7 +32,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Navbar/>
-        <div className=" block lg:hidden my-3 w-full py-2.5 px-5 md:p-8 shadow-xl">
+        <div className=" block lg:hidden my-3 w-full py-1.5 px-5 md:py-4 md:px-8 shadow-xl">
             <Hamburgernav/>
         </div>
         <div className="flex">
