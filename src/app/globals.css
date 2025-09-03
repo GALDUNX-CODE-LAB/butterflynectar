@@ -168,3 +168,17 @@
 body {
   font-family: Poppins;
 }
+
+.hero {
+  background: url("/plane.jpg") no-repeat;
+  background-size: cover;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE & Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}

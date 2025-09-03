@@ -1,16 +1,30 @@
 import DashboardCard from "@/components/dashboard/DashboardCard";
 import DashboardCard2 from "@/components/dashboard/dashboardCard2";
+import ClubIvyDetails from "@/components/home/ClubIvy";
+import Explore from "@/components/home/Explore";
+import Faqs from "@/components/home/Faqs";
+import FlightWidget from "@/components/home/FlightWidget";
+import Footer from "@/components/home/Footer";
+import Hero from "@/components/home/Hero";
+import Header from "@/components/home/HomeHeader";
+import InstantBooking from "@/components/home/InstantBooking";
+import Review from "@/components/home/Reviews";
+import SocialMediaFeed from "@/components/home/SocialMediaFeed";
 import PostsTable from "@/components/post/PostsTable";
 
 export default function Home() {
   return (
-    <div className="transition-all transform ease-in-out duration-500 delay-700">
-      <h1 className="text-2xl lg:text-4xl font-bold font-Ruska mb-7">HEY THERE, SHERIFF</h1>
-      <div className="flex flex-col gap-5">
-        <DashboardCard />
-        <DashboardCard2 />
-        <PostsTable />
-      </div>
+    <div className="wrap">
+      <Header />
+      <Hero />
+      <InstantBooking />
+      <ClubIvyDetails />
+      <Explore />
+      <FlightWidget />
+      <SocialMediaFeed />
+      <Review />
+      <Faqs />
+      <Footer />
     </div>
   );
 }
