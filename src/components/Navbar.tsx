@@ -1,7 +1,7 @@
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 import Link from "next/link";
-import DeskSetting from "@/app/dexsetting/page";
+import DeskSetting from "@/app/(dashboard)/dexsetting/page";
 
 const Navbar = () => {
   return (
