@@ -87,7 +87,7 @@ export default function AuthModal() {
 
           <motion.div
             ref={cardRef}
-            className="relative z-10 w-screen h-screen sm:w-full sm:h-auto sm:max-w-md sm:rounded-2xl bg-neutral-100 text-black shadow-2xl border border-black/10 p-5 sm:p-6"
+            className="relative z-10 w-screen h-dvh sm:w-full sm:h-auto sm:max-w-md sm:rounded-2xl bg-neutral-100 text-black shadow-2xl border border-black/10 p-5 sm:p-6"
             initial={{ y: 32, opacity: 0, scale: 0.98 }}
             animate={{ y: 0, opacity: 1, scale: 1 }}
             exit={{ y: 24, opacity: 0, scale: 0.98 }}
