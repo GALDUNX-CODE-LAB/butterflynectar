@@ -127,7 +127,7 @@ export default function Explore({ places, onExplore, className = "" }: ExplorePr
   }, [active, data]);
 
   return (
-    <section className={`relative w-full ${className}`}>
+    <section className={`relative w-full ${className}`} id="explore">
       <div className="absolute -top-10 -right-10 rounded-full bg-gradient-to-tr from-violet-400/20 to-fuchsia-400/20 blur-2xl" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
         <header className="flex flex-col gap-4 ">

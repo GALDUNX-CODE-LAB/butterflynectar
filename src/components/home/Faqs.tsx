@@ -35,7 +35,7 @@ export default function Faqs() {
   };
 
   return (
-    <section className="max-w-7xl mx-auto px-4 py-20 grid md:grid-cols-2 gap-12 items-start">
+    <section className="max-w-7xl mx-auto px-4 py-20 grid md:grid-cols-2 gap-12 items-start" id="faqs">
       {/* Left Column */}
       <div>
         <h2 className="text-xl md:text-3xl font-extrabold text-gray-900 font-Ruska">FAQs You Should Know!</h2>

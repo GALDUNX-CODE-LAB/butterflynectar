@@ -1,10 +1,11 @@
 "use client";
 
-import Image from "next/image";
-import Link from "next/link";
+import { useOpenModal } from "@/hooks/useOpenModal";
 import { FaWhatsapp } from "react-icons/fa";
 
 export default function Hero() {
+  const { setAuthOpen } = useOpenModal();
+
   return (
     <>
       <section className="relative  w-full pt-24 pb-16 text-white hero  ">
@@ -34,15 +35,12 @@ export default function Hero() {
           </div>
 
           <div className="mt-6 flex flex-row gap-4">
-            <Link href="/signin" className="px-6 py-3 bg-[#5849EF] rounded-full font-medium">
+            <button onClick={() => setAuthOpen(true)} className="px-6 py-3 bg-[#5849EF] rounded-full font-medium">
               Sign In
-            </Link>
-            <Link
-              href="/guest"
-              className="px-6 py-3 rounded-full bg-white text-[#5849EF] font-medium hover:bg-gray-100"
-            >
-              Sign In As Guest
-            </Link>
+            </button>
+            <button className="px-6 py-3 rounded-full bg-white text-[#5849EF] font-medium hover:bg-gray-100">
+              Buy a ticket
+            </button>
           </div>
         </div>
       </section>

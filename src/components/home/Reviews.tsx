@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { Star, ChevronRight } from "lucide-react";
+import { ChevronRight } from "lucide-react";
 
 export type ReviewItem = {
   id: string;
@@ -136,7 +136,7 @@ function ReviewCard({ r }: { r: ReviewItem }) {
 
 export default function Review({ overall = 4.8, reviews = DEFAULT_REVIEWS, className = "" }: ReviewProps) {
   return (
-    <section className={`relative w-full bg-[rgb(82,63,216)]/95 text-white ${className}`}>
+    <section className={`relative w-full bg-[rgb(82,63,216)]/95 text-white ${className}`} id="reviews">
       <div className="absolute -top-20 -right-24 rounded-full bg-fuchsia-400/30 blur-3xl" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         <div className="text-center">

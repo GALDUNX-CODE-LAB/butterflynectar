@@ -63,7 +63,7 @@ const flights: Flight[] = [
 
 export default function FlightWidget() {
   return (
-    <section className="max-w-7xl mx-auto px-4 py-16">
+    <section className="max-w-7xl mx-auto px-4 py-16" id="flight-status">
       <div className="text-center mb-10">
         <h2 className="text-xl md:text-3xl font-extrabold text-gray-900 font-Ruska">Real-Time Flight Status</h2>
         <p className="text-gray-600 mt-2">Live updates for today’s flights.</p>
